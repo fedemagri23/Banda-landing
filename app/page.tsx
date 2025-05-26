@@ -5,7 +5,6 @@ import Plans from "../components/Plans";
 import CustomPlan from "../components/CustomPlan";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import VideoPlayer from "../components/VideoPlayer";
 
 export default function Home() {
   return (

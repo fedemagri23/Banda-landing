@@ -1,4 +1,3 @@
-import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 
 export default function Hero() {
