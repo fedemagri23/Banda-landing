@@ -6,6 +6,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 const navLinks = [
   { label: "Funcionalidades", href: "#funcionalidades" },
   { label: "Planes", href: "#planes" },
+  { label: "Plan personalizado", href: "#personalizado" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -54,11 +55,11 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-30 w-full bg-background/80 backdrop-blur border-b border-border">
       <div className="container flex items-center justify-between h-16 mx-auto px-4">
-        <a href="#" className="flex items-center gap-2" style={{ height: "2.25rem" }}>
+        <a href="#" className="flex items-center gap-2 flex-1 justify-start" style={{ height: "2.25rem" }}>
           <Image src="/banda-logo.png" alt="Logo Banda" height={36} width={36} style={{ height: "2.25rem", width: "auto" }} />
           <span className="font-bold text-xl tracking-tight" style={{ color: 'hsl(var(--primary))', lineHeight: '2.25rem', fontSize: '1.5rem' }}>Banda</span>
         </a>
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex justify-center gap-8 flex-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -75,7 +76,7 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center flex-1 justify-end">
           <DarkModeButton />
           <a
             href="https://www.itba.edu.ar/"

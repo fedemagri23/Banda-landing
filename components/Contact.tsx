@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="w-full py-16 bg-muted/50 dark:bg-muted/30" id="contacto">
+    <section className="w-full h-screen flex items-center justify-center py-16 bg-muted/50 dark:bg-muted/30" id="contacto">
       <div className="container mx-auto px-4 max-w-xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-title-text dark:text-title-text">Contacto</h2>
         <form className="flex flex-col gap-4 bg-card p-6 rounded-xl shadow">
