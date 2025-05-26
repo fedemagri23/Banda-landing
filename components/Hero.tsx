@@ -1,4 +1,5 @@
 import Image from "next/image";
+import VideoPlayer from "./VideoPlayer";
 
 export default function Hero() {
   return (
@@ -30,8 +31,8 @@ export default function Hero() {
           <div className="text-sm text-muted-text mt-2">Sin tarjeta de crédito. 30 días gratis.</div>
         </div>
         <div className="flex-1 flex justify-center md:justify-end w-full">
-          <div className="w-full max-w-[420px] aspect-video bg-muted flex items-center justify-center rounded-xl border border-border shadow-lg text-muted-text text-lg font-semibold">
-            Próximamente: video demo de la app
+          <div className="w-full w-full aspect-video">
+            <VideoPlayer />
           </div>
         </div>
       </div>

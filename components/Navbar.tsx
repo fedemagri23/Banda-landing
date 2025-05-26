@@ -46,6 +46,10 @@ function DarkModeButton() {
 export default function Navbar() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    if (href === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -55,7 +59,12 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-30 w-full bg-background/80 backdrop-blur border-b border-border">
       <div className="container flex items-center justify-between h-16 mx-auto px-4">
-        <a href="#" className="flex items-center gap-2 flex-1 justify-start" style={{ height: "2.25rem" }}>
+        <a 
+          href="#" 
+          className="flex items-center gap-2 flex-1 justify-start" 
+          style={{ height: "2.25rem" }}
+          onClick={(e) => handleClick(e, '#')}
+        >
           <Image src="/banda-logo.png" alt="Logo Banda" height={36} width={36} style={{ height: "2.25rem", width: "auto" }} />
           <span className="font-bold text-xl tracking-tight" style={{ color: 'hsl(var(--primary))', lineHeight: '2.25rem', fontSize: '1.5rem' }}>Banda</span>
         </a>
