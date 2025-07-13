@@ -1,4 +1,6 @@
 import VideoPlayer from "./VideoPlayer";
+import FreeTrialForm from "./register/FreeTrialForm";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -12,21 +14,14 @@ export default function Hero() {
           <p className="text-lg text-muted-text max-w-lg">
             Banda es la plataforma integral para PYMES y profesionales: clientes, ventas, compras, facturación AFIP, análisis, IA y más. Todo en un solo lugar.
           </p>
-          <form className="flex w-full max-w-md gap-2">
-            <input
-              type="email"
-              placeholder="Tu email empresarial"
-              className="flex-1 px-4 py-3 rounded-lg border border-input bg-background text-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              required
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold shadow hover:bg-primary/80 transition-colors"
-              disabled
+          <div className="flex w-full max-w-md gap-2">
+             <Link 
+              href="/register"
+              className="bg-primary hover:bg-primary/90 py-4 px-8 rounded-xl text-white btn btn-primary w-full text-center"
             >
-              Probar gratis
-            </button>
-          </form>
+              Comienza tu prueba gratuita
+            </Link>
+          </div>
           <div className="text-sm text-muted-text mt-2">Sin tarjeta de crédito. 30 días gratis.</div>
         </div>
         <div className="flex-1 flex justify-center md:justify-end w-full">
