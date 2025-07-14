@@ -2,7 +2,7 @@ import PlanCard from "./PlanCard";
 
 export default function Plans() {
   return (
-    <section className="w-full h-screen flex items-center justify-center py-16 bg-gradient-to-b from-background to-muted/60" id="planes">
+    <section className="w-full h-screen flex items-center justify-center py-16 bg-muted/50" id="planes">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-title-text dark:text-title-text">Planes</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

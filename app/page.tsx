@@ -5,6 +5,7 @@ import Plans from "../components/Plans";
 import CustomPlan from "../components/CustomPlan";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import WhoAreWe from "../components/WhoAreWe";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Plans />
-      <CustomPlan />
+      <WhoAreWe />
       <Contact />
       <Footer />
     </div>

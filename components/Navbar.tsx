@@ -6,7 +6,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 const navLinks = [
   { label: "Funcionalidades", href: "#funcionalidades" },
   { label: "Planes", href: "#planes" },
-  { label: "Plan personalizado", href: "#personalizado" },
+  { label: "Quienes somos", href: "#quienes-somos" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -61,7 +61,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16 mx-auto px-4">
         <a 
           href="#" 
-          className="flex items-center gap-2 flex-1 justify-start" 
+          className="inline-flex items-center gap-2 flex-1 justify-start" 
           style={{ height: "2.25rem" }}
           onClick={(e) => handleClick(e, '#')}
         >
@@ -74,7 +74,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleClick(e, link.href)}
-              className="text-muted-text font-medium transition-colors"
+              className="text-muted-text font-medium transition-colors  hover:text-accent whitespace-nowrap"
               style={{
                 transition: 'color 0.2s',
               }}
@@ -87,23 +87,6 @@ export default function Navbar() {
         </div>
         <div className="flex gap-2 items-center flex-1 justify-end">
           <DarkModeButton />
-          <a
-            href="https://www.itba.edu.ar/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg border border-input text-muted-text hover:bg-muted/60 transition-colors"
-            style={{ background: 'hsl(var(--secondary))', color: 'hsl(var(--secondary-foreground))', border: 'none' }}
-          >
-            Login
-          </a>
-          <a
-            href="https://www.itba.edu.ar/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-semibold shadow hover:bg-primary/80 transition-colors"
-          >
-            Sign Up
-          </a>
         </div>
       </div>
     </nav>
